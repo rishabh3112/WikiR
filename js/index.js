@@ -9,7 +9,7 @@ $(document).ready(function() {
       document.getElementById('result-c').innerHTML = "";
       $('#message').addClass('animated bounceOut');
       
-      var playListURL = 'http://en.wikipedia.org//w/api.php?action=opensearch&format=json&search=' +encodeURI(val)+ '&limit=20&callback=?';
+      var playListURL = 'http://en.wikipedia.org//w/api.php?action=opensearch&format=json&search=' +encodeURIComponent(val)+ '&limit=20&callback=?';
 
       jQuery.getJSON(playListURL, function(data) {
         var title = data[1];
