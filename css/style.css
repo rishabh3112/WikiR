@@ -1,0 +1,198 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+.result{
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+h1{
+  font-family: 'Poiret One', cursive;
+}
+
+.group 			  { 
+  position:relative; 
+  display: inline-block;
+  margin-bottom:2px;
+  float: right;
+  margin-top: -50px;
+   font-family: 'Roboto' !important;
+  
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  background: transparent;
+  border:none;
+   font-family: 'Roboto' !important;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+.well{
+  overflow: hidden;
+}
+/* LABEL ======================================= */
+label 				 {
+  color: #9999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  font-family: 'Roboto' !important;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color: steelblue;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+@media only screen and (max-width: 1000px){
+  .group{
+    float: none;
+    margin-top: 10px;
+  }
+  #message{
+    top: 0%;
+  }
+  h1,p{
+    text-align: center;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .btn{
+    margin-left: 0px;
+  }
+  
+} 
+.btn{
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+#loader {
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  text-shadow: 3px 3px 9px orange;
+  z-index: 1;
+  font-size: 100px;
+  color: gold;
+  margin: -75px 0 0 -75px;
+ 
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotateZ(0deg) rotateY(0deg); }
+  100% { transform: rotateZ(0deg) rotateY(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+}
+#message{
+   position: absolute;
+ left: 45%;
+  top: 80%;
+  text-shadow: 3px 3px 9px orange;
+  z-index: 1;
+  font-size: 30px;
+  color: gold;
+  margin: -75px 0 0 -75px;
+}
+#message a{
+  color: gold;
+  border-bottom: 3px;
+}
+
