@@ -48,6 +48,7 @@ function myFunction() {
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
+  document.getElementById("message").style.display = "none";
   $('.well').addClass('animated zoomIn');
   $('#random').addClass('animated fadeInUp')
 }
